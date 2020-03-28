@@ -22,5 +22,6 @@ const newArray = [1,2,3]
 var x = newArray.map(Math.sqrt)
 console.log(x)
 
+// the map function is a callback function, it will invoke the function in every element of the array:
 var y = newArray.map(e => e*e)
 console.log(y)                      // 1, 2, 9
