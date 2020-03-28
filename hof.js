@@ -148,7 +148,6 @@ const subtract = (a, b) => a - b;
 const calc = function(operation, operand) {
  let total = 0;
   const doOperation = function(operation, operand) {
-    console.log(operand)
     total = operation(total, operand)
     return total;
   }
@@ -156,6 +155,21 @@ const calc = function(operation, operand) {
   return total;
 }
 
-console.log(calc(add,3))
+console.log(calc(add,3)) //6
 
 //********************************************************************//
+const add = (a, b) => a + b;
+const multiply = (a, b) => a * b;
+const subtract = (a, b) => a - b;
+
+const calc = function(operation, operand, callback) {
+ let total = 0;
+  const doOperation = function(operation, operand) {
+    total = operation(total, operand)
+    return total;
+  }
+  total = doOperation(callback, doOperation(operation,operand))
+  return total;
+}
+
+console.log(calc(add,3,multiply)) // 9
