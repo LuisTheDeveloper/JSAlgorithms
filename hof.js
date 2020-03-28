@@ -16,3 +16,11 @@ console.log(twice(add3, 7));  // Result is 13
       y = twice(add3, x);   // 13
       
       console.log(y)  // 13
+//
+const newArray = [1,2,3]
+
+var x = newArray.map(Math.sqrt)
+console.log(x)
+
+var y = newArray.map(e => e*e)
+console.log(y)                      // 1, 2, 9
