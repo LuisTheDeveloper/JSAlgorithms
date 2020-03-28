@@ -16,7 +16,9 @@ console.log(twice(add3, 7));  // Result is 13
       y = twice(add3, x);   // 13
       
       console.log(y)  // 13
-//
+
+//********************************************************************//
+
 const newArray = [1,2,3]
 
 var x = newArray.map(Math.sqrt)
@@ -25,3 +27,34 @@ console.log(x)
 // the map function is a callback function, it will invoke the function in every element of the array:
 var y = newArray.map(e => e*e)
 console.log(y)                      // 1, 2, 9
+
+//********************************************************************//
+
+function isOdd(e) {
+  return e % 2 === 1;
+}
+
+const newArray2 = [1, 2, 3].filter(isOdd);
+console.log(newArray2)
+
+//********************************************************************//
+
+function multiplyBy(a) {
+  return multiplyBy.factor * a;
+}
+
+multiplyBy.factor = 5;
+
+function host(func) {
+  // do something with func
+  return func;
+}
+
+const add = (a, b) => a + b;
+
+const result = host(multiplyBy)(3)
+
+console.log(result)     // 15
+
+const result2 = host(add)(40, 2)
+console.log(result2)    // 42
