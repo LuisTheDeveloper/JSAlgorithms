@@ -1,6 +1,7 @@
 //JS - Algorithms
 
-//addArgs: suming an unknown numbers and displaying the result to the console.
+// When not knowing the number of arguments use arguments.
+//addArgs: suming an unknown number of arguments and displaying the result to the console.
 function addArgs(){
   let a = 0
 
@@ -10,7 +11,7 @@ function addArgs(){
   console.log(a)
 }
 
-//addArgs: multiplying an unknown numbers and displaying the result to the console.
+//addArgs: multiplying an unknown numbers of arguments and displaying the result to the console.
 function multArgs(){
   let a = 1
 
